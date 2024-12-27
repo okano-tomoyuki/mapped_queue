@@ -126,9 +126,9 @@ private:
             throw std::runtime_error("NamedQueue '" + std::string(func_name) + std::string("' method was failed! Queue is not attached."));
     }
 
-    static std::unordered_map<std::string, Queue>& get_table()
+    static std::unordered_map<T, Queue>& get_table()
     {
-        static std::unordered_map<std::string, Queue> table;
+        static std::unordered_map<T, Queue> table;
         return table;
     }
 };
