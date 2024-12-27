@@ -80,11 +80,6 @@ public:
         return queue_->data.size();
     }
  
-    void push(const char* val)
-    {
-        push(std::string(val));
-    }
-
     void push(const U& val)
     {
         check_attached(queue_, __func__);
